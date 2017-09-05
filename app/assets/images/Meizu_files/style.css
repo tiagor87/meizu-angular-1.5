@@ -1,0 +1,505 @@
+body, html {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+#wrapper {
+	height: 100%;
+}
+
+.navbar-default {
+	margin-bottom: -10px;
+}
+
+#navbar-logo {
+	width: auto;
+	height: 20px;
+	margin-left: 30px;
+}
+
+.navbar-nav {
+	list-style-type: none;
+	margin-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+	.collapse {
+		float: right;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.navbar-nav {
+		float: left;
+		text-indent: 20px;
+	}
+}
+
+#navbar-links li {
+	display: inline-block;
+	width: 110px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+#mainContent {
+	top: 0;
+	bottom: 0;
+	position: relative;
+}
+
+/* image slideshow begin */
+
+.slideshow-box {
+	width: 100%;
+	min-height: 100px;
+	margin: 0 auto;
+	padding-top: -10px;
+	position: relative;
+}
+
+.slideshow .slider-content {
+	position: absolute;
+	width: 100%;
+	max-height: 400px;
+}
+
+.slide-image {
+	width: 100%;
+	height: auto;
+	top: 0;
+	margin-left: 0;
+}
+
+.animate-enter,
+.animate-leave {
+	-webkit-transition: 1000ms cubic-bezier(.165,.84,.44,1) all;
+	-moz-transition: 1000ms cubic-bezier(.165,.84,.44,1) all;
+	-ms-transition: 1000ms cubic-bezier(.165,.84,.44,1) all;
+	-o-transition: 1000ms cubic-bezier(.165,.84,.44,1) all;
+	transition: 1000ms cubic-bezier(.165,.84,.44,1) all;
+}
+
+.animate-enter {
+	margin-left: 100%;
+}
+
+.animate-enter.animate-enter-active {
+	margin-left: 0;
+}
+
+.animate-leave {
+	margin-left: 0;
+}
+
+.animate-leave.animate-leave-active {
+	margin-left: -100%;
+}
+
+/* image slideshow end */
+
+/* Phone JSON begin */
+#nine-phones {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.phone_block {
+	border: 2px solid #d6d6d6;
+	padding: 15px;
+	height: 366px;
+	margin-bottom: 20px;
+}
+
+.image_logo {
+	height: 25px;
+	top: 50px;
+	width: auto;
+	position: absolute;
+}
+
+.image_phone {
+	margin-top: 35px;
+	margin-right: 80px;
+	width: auto;
+	height: 155px;
+	position: relative;
+}
+
+.brand {
+	text-align: center;
+	border: 1px solid grey;
+	background-color: #3db1fa;
+	font-size: 20px;
+	color: white;
+	box-shadow: inset 1px 1px 5px rgba(255,255,255,0.75), /* inset is being used for inner shadow */
+				inset -1px -1px 5px rgba(0,0,0,0.35);
+}
+
+.unordered_list_phone {
+	border: 1px solid grey;
+	list-style-type: none;
+	text-indent: -15px;
+	margin-top: 22px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: relative;
+	background: #3db1fa;
+	color: white;
+	font-weight: bold;
+	box-shadow: inset 1px 1px 5px rgba(255,255,255,0.75), /* inset is being used for inner shadow */
+				inset -1px -1px 5px rgba(0,0,0,0.35);
+}
+/* Phone JSON end */
+
+
+/* accessoires begin */
+.headphone_image {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 0;
+	width: 100%;
+	bottom: 0;
+	position: relative;
+	padding-top: 50.25%;
+	display: block;
+}
+
+#HD_headphone {
+	color: #3db1fa;
+	border: 1px solid #3db1fa;
+	bottom: 200px;
+	left: 0;
+	font-size: 100%;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	width: 170px;
+	position: absolute;
+}
+
+.min #HD_headphone {
+	-webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+    -moz-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+    -ms-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+    -o-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+	margin-left: 180px;
+}
+
+#white-headphone-vertical {
+	top: 50px;
+	left: 50px;
+	position: absolute;
+	border: 1px solid black;
+	width: 170px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: center;
+}
+
+.min #white-headphone-vertical {
+	-webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s;
+    -moz-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s;
+    -ms-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s;
+    -o-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s;
+	margin-top: 200px;
+}
+
+.animate-text {
+	box-shadow: inset 1px 2px 5px rgba(255,255,255,0.75), /* inset is being used for inner shadow */
+	inset -1px -1px 5px rgba(0,0,0,0.35);
+}
+
+/* accessoires end */
+
+
+/* where to buy begin */
+.title-stores {
+	text-align: center;
+	background-color: #3db1fa;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
+	font-size: 16px;
+	color: white;
+	box-shadow: inset 0 2px 2px rgba(255,255,255,0.75), /* inset is being used for inner shadow */
+				inset 0 -1px 2px rgba(0,0,0,0.35);
+}
+
+.country-row {
+	float: left;
+	width: 70px;
+	position: relative;
+}
+
+.country-row .country-icon {
+	width: 26px;
+	height: 26px;
+	background-image: url("image/country-flags.png");
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.country-row-details {
+	float: left;
+	width: 160px;
+	min-height: 210px;
+}
+
+@media screen and (max-width: 991px) {
+	.tab-blocks {
+		margin-bottom: 20px;
+	}
+}
+
+.center {
+	display: table;
+	margin: 0 auto;
+}
+
+.store-image:hover {
+	border: 1px solid #3db1fa;
+	cursor: pointer;
+}
+
+.country-shops {
+	float: left;
+}
+
+.store-number {
+	font-weight: bold;
+}
+
+.offline-address {
+	margin-left: 20px;
+	margin-right: 20px;
+	min-height: 130px;
+	margin-bottom: 5px;
+	border: 1px solid grey;
+	color: white;
+	background-color: #3db1fa;
+	box-shadow: inset 1px 2px 5px rgba(255,255,255,0.75), /* inset is being used for inner shadow */
+				inset -1px -1px 5px rgba(0,0,0,0.35);
+}
+
+.offline-block {
+	padding: 2px 10px;
+}
+
+.offline-shop-logo {
+	height: 100px;
+}
+
+.offline-store-name {
+	text-indent: 30px;
+	font-weight: bold;
+}
+
+.second-offline-block {
+	margin-top: 50px;
+}
+
+/* where to buy end */
+
+/* forum begin */
+#sign-up-button {	
+	float: right;
+	border-radius: 2px;
+	background-color: #00b4f1;
+}
+
+#sign-up-text {
+	height: 40px;
+	line-height: 47px;
+	width: 180px;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+}
+
+#image-block {
+	float: left;
+	border: green;
+	display: block;
+}
+
+#image-profile {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#comment_box {
+	float: left;
+}
+
+#profile-picture {
+	width: 80px;
+	height: 80px;
+	border: 1px solid black;
+}
+
+#comment-list {
+	border: 1px solid #00b4f1;
+	margin-top: 10px;
+	padding: 10px;
+	width: 500px;
+	min-height: 50px;
+}
+
+#comment {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	word-wrap: break-word;
+}
+
+#remain_amount_of_letters {
+	border: none;
+	margin-top: 1px;
+	margin-bottom: -5px;
+	text-indent: 5px;
+}
+
+textarea {
+	outline: none;
+	box-sizing: border-box;
+	width: 480px;
+}
+
+#countries {
+	font-size: 18pt;
+}
+
+#text-block {
+	margin-left: 90px;
+}
+
+.name {
+	font-weight: bold;
+	border: 1px solid grey;
+	padding: 2px;
+	background-color: #00b4f1;
+	color: white;
+}
+
+.comment, .countries {
+	font-size: 12px;
+	padding: 2px;
+}
+
+#comment-block {
+	width: 500px;
+}
+
+.form-block {
+	border: 1px solid #3db1fa;
+	width: 500px;
+	margin-top: 10px;
+}
+
+ .comment-button {
+	margin-bottom: 10px;
+	background-color: #3db1fa;
+	color: white;
+	border: none;
+	height: 30px;
+}
+
+.comment-button:hover {
+	background-color: #3d6afa;
+}
+
+.comment-form {
+	width: 480px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	border: 1px solid green;
+}
+
+/* forum end */
+
+#footer-container {
+	padding-bottom: 30px;
+	margin-top: 30px;
+	color: #666;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	position: relative;
+}
+
+@media screen and (min-width: 768px) {
+	#footer-container {
+		padding-left: 100px;
+	}
+}
+
+.list-footer-header {
+	padding-bottom: 3px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.list-footer {
+	list-style-type: none;
+}
+
+.list-footer li {
+	margin-top: 5px;
+}
+
+#footer-text {
+	text-align: center;
+}
+
+#footer {
+	position: relative;
+	height: 30px;
+	clear: both;
+	margin-bottom: 0;
+	color: #666;
+}
+
+#social-media-icons {
+/*	float: right;*/
+	position: relative;
+	top: -12px;
+}
+
+.social_image1 {
+	background-position: 0 0;
+}
+
+.social_image2 {
+	background-position: -38px 0;
+}
+
+.social_image3 {
+	background-position: -75px 0;
+}
+
+.social_image4 {
+	background-position: -113px 0;
+}
+
+#social-media-icons .social-image {
+	display: inline-block;
+	width: 500px;
+	height: 500px;
+	position: relative;
+}
+
+.social_image {
+	background: url(image/social-icon.png) bottom;
+}

@@ -1,0 +1,28 @@
+<div ng-controller="forumController" class="forum-page">
+    <div class="col-lg-12">
+
+        <div class="comment-block">
+            <div class="comment-list" ng-repeat="comment in comments">
+                <div class="text-block">
+                    <div class="comment-info name">{{comment.name}}</div>
+                    <div class="comment-info comment">{{comment.comment}}</div>
+                    <div class="comment-info countries">{{comment.country}}</div>
+                </div>
+            </div>
+            <div id="newComments"></div>
+            <ng-form class="comment-box">
+                <input type="text" class="comment-form" ng-model="dataObject.name" ng-minlength="2" ng-maxlength="20" ng-required="true" placeholder="Name">
+
+                <select class="comment-form" ng-model="dataObject.country" ng-options="x.country as x.country for x in options" ng-required="true">
+                    <option value="">-- Choose Country --</option>
+                </select>
+
+                <textarea type="text" class="comment-form countries" ng-model="dataObject.comment" rows="6" cols="90" ng-minlength="1" ng-maxlength="300" ng-required="true" placeholder="Comment"></textarea>
+
+                <span class="comment-form remain_amount_of_letters">{{300-dataObject.comment.length}} Left</span>
+                <input class="comment-form comment-button" ng-disabled="comment_box.$invalid" type="submit" ng-click="addComment(dataObject)">Place comment</button>
+            </ng-form>
+        </div>
+
+    </div>
+</div>

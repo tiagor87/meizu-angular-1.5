@@ -1,0 +1,132 @@
+angular.module("forum-page", ["myApp"])
+	.controller("Forum", function($scope, $timeout) {
+		$scope.options = [
+			{		
+				id: 1, 
+				country : "Angola"
+			},
+				{
+				id: 2, 
+				country: "Argentina"
+			}, 
+			{
+				id: 3, 
+				country: "België"
+			}, 
+			{
+				id: 4, 
+				country: "Brazil"
+			}, 
+			{
+				id: 5, 
+				country: "Canada"
+			}, 
+			{
+				id: 6, 
+				country: "Deutschland"
+			}, 
+			{
+				id: 7, 
+				country: "Ghana"
+			},
+			{
+				id: 8, 
+				country: "Indonesia"
+			}, 
+			{
+				id: 9, 
+				country : "Italy"
+			},
+			{
+				id: 10, 
+				country : "Mexico"
+			},
+			{
+				id: 11, 
+				country: "Portugal"
+			}, 
+			{
+				id: 12, 
+				country: "Qaṭar"
+			}, 
+			{
+				id: 13, 
+				country: "Россия"
+			}, 
+			{
+				id: 14, 
+				country: "USA"
+			}, 
+			{
+				id: 15, 
+				country: "中国"
+			},
+			{
+				id: 16, 
+				country: "香港"
+			},
+			{
+				id: 17, 
+				country : "日本"
+			},
+			{
+				id: 18, 
+				country: "新加坡"
+			},
+			{
+				id: 19, 
+				country: "한국"
+			}
+		];
+
+		$scope.comments = [
+			{
+			"image": "image/profile1.jpg", 
+			"name": "Kevin", 
+			"country": "Nederland",
+			"comment": "Wat een mooi toestel vandaag ontvangen, zeer blij met mijn bestelling :)"
+			}, 
+			{
+			"image": "image/profile2.jpg", 
+			"name": "Jason", 
+			"country": "USA", 
+			"comment": "What a great phone I received from Meizu, will surely come back to buy again in the future"
+			}, 
+			{
+			"image": "image/profile3.jpg", 
+			"name": "姚宣辰", 
+			"country": "中国", 
+			"comment": "這個手機很標亮， 下次也會買魅族智能手機"
+			}
+		];
+
+	$scope.addComment = function(comment) {
+
+		var image_path = "image/profile" 
+		var number = Math.floor((Math.random()*8) + 1);
+		var extension = ".jpg";
+	
+		// $scope.name = $scope.dataObject.name;
+		// $scope.comment = $scope.dataObject.comment;
+		// $scope.country = $scope.dataObject.country;
+		$scope.imageNumber = image_path + number + extension;
+
+		if($scope.comment.image === "") {
+			$scope.comment.image = "image/profile2.jpg";
+		}
+
+		$scope.comment = {
+			image: $scope.imageNumber, 
+			name: "", 
+			country: "", 
+			comment: ""
+			
+		};
+
+
+		$scope.comments.push(comment);
+		console.log(comment);
+		
+	}
+	
+});

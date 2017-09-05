@@ -1,0 +1,7 @@
+angular.module("json", ["myApp"])
+	.controller("PhonesController", function($scope, $http) {
+		$http.get("js/smartphone.json")
+		.success(function(response) {
+			$scope.infos = response.smartphones;
+		});
+	});

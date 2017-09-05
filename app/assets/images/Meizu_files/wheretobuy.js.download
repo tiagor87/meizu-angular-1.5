@@ -1,0 +1,59 @@
+angular.module("wheretobuy", ["myApp"])
+	.controller("TabController", function($scope) {
+			// online stores
+			$scope.tab = 1;
+
+			$scope.setTab = function(newTab){
+				$scope.tab = newTab;
+			};
+
+			$scope.isSet = function(tabNum) {
+				return $scope.tab === tabNum;
+			};
+
+
+			// offline stores
+			$scope.offTab = 1;
+			$scope.offlineTab = function(newOfflineTab){
+				$scope.offTab = newOfflineTab;
+			}; 
+
+			$scope.offlineIsSet = function(offlineTabNum) {
+				return $scope.offTab === offlineTabNum;
+			}
+
+		var shop = {
+
+			amazon: "image/amazon.jpg", 
+			amazon_france: "image/amazonfr.jpg", 
+			amazon_uk: "image/amazon-uk.jpg", 
+			bug: "image/bug.jpg",
+			cdiscount: "image/cdiscount.jpg", 
+			e_ton: "image/e-ton.jpg", 
+			israel_meizu: "image/israel.jpg", 
+			snapdeal: "image/snapdeal.jpg", 
+			meizu_france: "image/meizu-fr.jpg", 
+			meizu_brazil: "image/meizu-brazil.jpg", 
+			meizu_espana: "image/meizu-espana.jpg", 
+			meizumart: "image/meizumart.jpg", 
+			meizu_russia: "image/meizu-russia.jpg", 
+			meizu_spain: "image/meizu-spain.jpg", 
+			pb: "image/pb.jpg", 
+			pixelphone: "image/pixelphone.jpg", 
+			pixmania: "image/pixmania.jpg", 
+			ruducommerce: "image/ruducommerce.jpg", 
+			topresellerstore: "image/topresellerstore.jpg", 
+			untpvc: "image/untpvc.jpg"
+
+		};
+
+		$scope.shop = shop;
+
+		var offlineShop = {
+			jill: "image/offlinestore-brunei.jpg", 
+			wywyenterprise: "image/offlinestore-brunei1.jpg"
+		};
+
+		$scope.offlineShop = offlineShop;
+
+	});

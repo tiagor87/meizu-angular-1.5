@@ -1,0 +1,61 @@
+[{
+        "brand": "Meizu",
+        "logo": "assets/images/meizu-logo.png",
+        "alt_image": "image meizu pro6",
+        "serie": "Pro6",
+        "memory": "4GB RAM",
+        "rom": "128GB ROM",
+        "price": "€ 250,-",
+        "image": "assets/images/meizu-pro6.png", 
+        "quantity": 1
+    }, {
+        "brand": "Meizu",
+        "logo": "assets/images/meizu-logo.png",
+        "alt_image": "image meizu m5",
+        "serie": "M5 3",
+        "memory": "6GB RAM",
+        "rom": "64GB ROM",
+        "price": "€ 300,-",
+        "image": "assets/images/meizu-m5.jpg",
+        "quantity": 1
+    }, {
+        "brand": "Meizu",
+        "logo": "assets/images/meizu-logo.png",
+        "alt_image": "image meizu mx5",
+        "serie": "MX5",
+        "memory": "4GB RAM",
+        "rom": "128GB ROM",
+        "price": "€ 400,-",
+        "image": "assets/images/mx5.png",
+        "quantity": 1
+    }, {
+        "brand": "Meizu",
+        "logo": "assets/images/meizu-logo.png",
+        "alt_image": "image meizu mx4 pro",
+        "serie": "MX4 Pro",
+        "memory": "4GB RAM",
+        "rom": "128GB ROM",
+        "price": "€ 400,-",
+        "image": "assets/images/mx4pro.jpg",
+        "quantity": 1
+    }, {
+        "brand": "Meizu",
+        "logo": "assets/images/meizu-logo.png",
+        "alt_image": "image meizu mx4",
+        "serie": "MX4",
+        "memory": "4GB RAM",
+        "rom": "128GB ROM",
+        "price": "€ 350,-",
+        "image": "assets/images/mx4.jpg",
+        "quantity": 1
+    }, {
+        "brand": "Meizu",
+        "logo": "assets/images/meizu-logo.png",
+        "alt_image": "image meizu m3e",
+        "serie": "M3E",
+        "memory": "6GB RAM",
+        "rom": "64GB ROM",
+        "price": "€ 400,-",
+        "image": "assets/images/m3e.jpg",
+        "quantity": 1
+    }]

@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://169.254.47.43:8081/#/wheretobuy -->
+<html lang="en" ng-app="myApp" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>	
+	<title>Meizu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description=" content="Meizu Official Website designed by Chi Ho Liu">
+	<meta name="keyword" content="personal website, smartphone, meizu, china, mobile, technology, pro6, pro 6, pro5 pro 5, m2, m3, note, mx5">
+
+	<link rel="shortcut icon" href="http://169.254.47.43:8081/image/flavicon.ico" type="image/x-icon">
+	<link href="./Meizu_files/style.css" rel="stylesheet" type="text/css">
+	<link href="./Meizu_files/bootstrap.css" rel="stylesheet" type="text/css">
+
+	<script src="./Meizu_files/angular.js.download" type="text/javascript"></script>
+	<script src="./Meizu_files/angular-route.min.js.download" type="text/javascript"></script>
+	<script src="./Meizu_files/jquery-2.1.4.min.js.download" type="text/javascript"></script>
+	<script src="./Meizu_files/bootstrap.min.js.download" type="text/javascript"></script>
+	<script src="./Meizu_files/module.js.download" type="text/javascript"></script>
+	<script src="./Meizu_files/slideshow.js.download" type="text/javascript"></script>
+	<script src="./Meizu_files/controller.js.download" type="text/javascript"></script>
+	<script src="./Meizu_files/accessoires.js.download" type="text/javascript"></script>
+	<script src="./Meizu_files/wheretobuy.js.download" type="text/javascript"></script>
+	<script src="./Meizu_files/forum.js.download" type="text/javascript"></script>
+	<script src="./Meizu_files/angular-animate.js.download" type="text/javascript"></script>
+</head>
+
+<body>
+	<script type="text/ng-template" id="pages/home.html">
+		<div ng-controller="SlideShowController" ng-switch="slider" class="slideshow-box animate">
+			<div class="slider-content" ng-switch-when="1">
+				<img ng-src="{{image.one}}" class="slide-image" alt="meizu-m3-picture" />
+			</div>
+
+			<div class="slider-content" ng-switch-when="2">
+				<img ng-src="{{image.two}}" class="slide-image" alt="meizu-mx6-picture"/>
+			</div>
+
+			<div class="slider-content" ng-switch-when="3">
+				<img ng-src="{{image.three}}" class="slide-image" alt="meizu-m3s-picture"/> 
+			</div>
+		</div>
+
+		<div ng-controller="PhonesController" class="json">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="nine-phones">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item" ng-repeat="info in infos">
+						<div class="phone_block">
+						<div class="brand">{{info.brand}}</div>
+						<img ng-src="{{info.logo}}" alt="{{info.alt}}" class="image_logo"/>
+						<img ng-src="{{info.image}}" "{{info.alt_image}}" class="image_phone"/>
+						<ul class="unordered_list_phone">
+							<li class="serie">{{info.serie}}</li>
+							<li class="memory">{{info.memory}}</li>
+							<li class="rom">{{info.rom}}</li>
+							<li class="price">{{info.price}}</li>
+						</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	</script>
+
+	<script type="text/ng-template" id="pages/accessories.html">
+		<div ng-controller="HeadphoneController" scroll class="accessoires">
+
+		<div class="container-fluid">
+		<div ng-style="{'background-image': 'url(http://res.cloudinary.com/djlrz2rnd/image/upload/q_100/v1479044967/hd50_dash_8ffda17_yuqtme.jpg)'}" class="headphone_image" ng-class="{min:boolChangeClass}">
+			<span class="hidden-xs animate-text" id="HD_headphone">HD 50</span>
+		</div>
+
+		<div ng-style="{'background-image': 'url(http://www3.res.meizu.com/static/en/accessory/hd50/summary/images/cross_white_d2d07af.png)'}" class="headphone_image" ng-class="{min:imageAnimateDown}">
+			<span class="hidden-xs animate-text" id="white-headphone-vertical">White version</span>
+		</div>
+	
+		</div>
+
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="pages/wheretobuy.html">
+		<div ng-controller="TabController" class="row">
+			<div class="container-fluid">
+			<p class="title-stores">Online Stores</p>
+			<div class="col-md-2 tab-blocks">
+				<ul class="nav nav-pills nav-stacked">
+					<li class="{active: isSet}">
+					 	<a href ng-click="setTab(1)" class="country  bold-text">Asia</a>
+					</li>
+
+					<li class="{active: isSet}">
+						<a href ng-click="setTab(2)" class="country  bold-text">Europe</a>
+					</li>
+
+					<li class="{active: isSet}">
+						<a href ng-click="setTab(3)" class="country  bold-text">South-America</a>
+					</li>
+
+					<li class="{active: isSet}">
+						<a href ng-click="setTab(4)" class="country bold-text">Oceania</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="isSet(1)">
+					<div class="country">
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+					<!-- 		<span class="country-icon indian-icon"></span> -->
+							<p>India</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="http://www.amazon.in/gp/product/B01082CP4S/f=s9_simh_gw_p107_d11_i6?pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=desktop-1&pf_rd_r=1WSP93T9AA95KCRZ9C0G&pf_rd_t=36701&pf_rd_p=653407267&pf_rd_i=desktop" target="_blank">
+										<img ng-src="{{shop.amazon}}" alt="amazon-india-sales" class="store-image"/>
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="https://www.snapdeal.com/product/meizu-mx5-silver-black/618643364985" target="_blank">
+										<img ng-src="{{shop.snapdeal}}" alt="snapdeal-sales" class="store-image"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+							<!-- <span class="country-icon israel-icon"></span> -->
+							<p>Israel</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="http://www.meizu.co.il/" target="_blank">
+										<img ng-src="{{shop.israel_meizu}}" alt="israel_meizu-sales" class="store-image"/>
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://www.bug.co.il/fpage.asp?brand=153&bna=Meizu" target="_blank">
+										<img ng-src="{{shop.bug}}" alt="bug-sales" class="store-image"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="isSet(2)">
+					<div class="country">
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon indian-icon"></span> -->
+							<p>France</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="http://www.meizumobiles.fr/shop/" target="_blank">
+										<img ng-src="{{shop.meizu_france}}" alt="meizu-france-sales" class="store-image"/>
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://www.cdiscount.com/search/10/meizu.html#_his_" target="_blank">
+										<img ng-src="{{shop.cdiscount}}" alt="cdiscount-france-sales" class="store-image"/>
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://www.rueducommerce.fr/~meizu" target="_blank">
+										<img ng-src="{{shop.ruducommerce}}" alt="ruducommerce=france-sales" class="store-image"/>
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="https://www.amazon.fr/s/ref=nb_sb_noss/278-2570132-9376431?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Daps&field-keywords=meizu" target="_blank">
+										<img ng-src="{{shop.amazon_france}}" alt="amazon-france-france-sales" class="store-image"/>
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="https://www.pixmania.fr/search/meizu.html" target="_blank">
+									 	<img ng-src="{{shop.pixmania}}" alt="pixmania-france-sales" class="store-image"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon israel-icon"></span> -->
+							<p>Italy</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="https://www.meizumart.it/en/" target="_blank">
+										<img ng-src="{{shop.meizumart}}" alt="meizu-sales" class="store-image"/>
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="https://www.topresellerstore.com/en/132-meizu" target="_blank">
+										<img ng-src="{{shop.topresellerstore}}" alt="bug-sales" class="store-image"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon israel-icon"></span> -->
+							<p>Russia</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="http://www.mymeizu.ru/" target="_blank">
+										<img ng-src="{{shop.meizu_russia}}" alt="meizu-russia-sales" class="store-image"/>
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://pixelphone.ru/search/index.php?q=meizu&s=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA" target="_blank">
+										<img ng-src="{{shop.pixelphone}}" alt="pixelphone-sales" class="store-image"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon israel-icon"></span> -->
+							<p>Spain</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="https://www.mymeizu.es/" target="_blank">
+										<img ng-src="{{shop.meizu_spain}}" alt="meizu-spain-sales" class="store-image"/>
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://www.meizuspain.com/" target="_blank">
+										<img ng-src="{{shop.meizu_espana}}" alt="meizu-espana-sales" class="store-image"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon israel-icon"></span> -->
+							<p>Ukraine</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="http://www.citrus.ua/shop/goods/mobile/1173/?utm_source=meizu_com&utm_medium=referral&utm_campaign=citrus-logo-wheretobuy" target="_blank">
+										<img ng-src="{{shop.untpvc}}" alt="untpvc-sales" class="store-image"/>
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://e-ton.ua/smartfony/meizu/" target="_blank">
+										<img ng-src="{{shop.e_ton}}" alt="e_ton-sales" class="store-image"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon israel-icon"></span> -->
+							<p>UK</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="https://www.amazon.co.uk/s/ref=nb_sb_noss/275-0297766-2602457?url=search-alias=aps&field-keywords=meizu" target="_blank">
+										<img ng-src="{{shop.amazon_uk}}" alt="amazon-uk-sales" class="store-image"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="isSet(3)">
+					<div class="country">
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon indian-icon"></span> -->
+							<p>Brazil</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="https://vistation.com.br/" target="_blank">
+										<img ng-src="{{shop.meizu_brazil}}" alt="meizu-brazil-sales" class="store-image"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="isSet(4)">
+					<div class="country">
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon indian-icon"></span> -->
+							<p>New Zealand</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="https://www.pbtech.co.nz/" target="_blank">
+										<img ng-src="{{shop.pb}}" alt="pb-oceanie-sales" class="store-image"/>
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<p class="title-stores">Offline Stores</p>
+			<div class="col-md-2 tab-blocks">
+				<ul class="nav nav-pills nav-stacked">
+					<li class="{active: offlineIsSet}">
+					 	<a href ng-click="offlineTab(1)" class="offline-store country">Brunei</a>
+					</li>
+
+					<li class="{active: offlineIsSet}">
+						<a href ng-click="offlineTab(2)" class="offline-store country">Cambodia</a>
+					</li>
+
+					<li class="{active: offlineIsSet}">
+						<a href ng-click="offlineTab(3)" class="offline-store country">Myanmar</a>
+					</li>
+
+					<li class="{active: offlineIsSet}">
+						<a href ng-click="offlineTab(4)" class="offline-store country">New-Zealand</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="offlineIsSet(1)">
+					<div class="country">
+						<div>
+							<p class="offline-store-name">Jill and Jill Enterprise</p>
+						</div>
+						<div>
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 1</h5>
+									<p># 5 GROUND FLOOR BLK<br> B LOT 30087 SPG. 343 KG<br> MULAUT MUKIM SENGKURONG BG 2121 +673-2672665
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 2</h5>
+									<p>#37B, GRD FLR PLAZA SERIA<br> JLN SULTAN OMAR ALI<br> SERIA<br> BELAIT 
+									+673-3222901
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 3</h5>
+									<p>#2, GRD FLR<br> BLK. H<br> ABDUL RAZAK COMPLEX<br> KM4, KG GADONG<br> JLN GADONG 
+									+673-2455131
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 4</h5>
+									<p>KG MUMONG, JLN MUALANA<br>  KM 26<br> KUALA BELAIT (INSIDE SOON LEE) 
+									+673-3335599
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 5</h5>
+									<p>#2-40, 2ND FLR<br> THE MALL ABDUL RAZAK COMPLEX<br> GADONG 
+									+673-2425199
+									</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<p class="offline-store-name second-offline-block">WYWY Enterprise</p>
+						</div>
+						<div>
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 1</h5>
+									<p>#G-06/08 and 11<br> BLK B<br> YAYASAN SULTAN HJ HASSANAL BOLKIAH<br> BSB 
+									+673-2232693
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 2</h5>
+									<p>PLOT SHOP #01<br> JLN SUNGAI K.B 
+									+673-3336226
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 3</h5>
+									<p>#11<br> GRD FLOOR<br> DELIMA COMPLEX 1<br> KG SERUSOP<br> JALAN MUARA 
+									+673-2340633
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 4</h5>
+									<p>#2<br> BLK F<br> LATIFUDDIN COMPLEX<br> KG PENGKALAN GADONG<br> TUNGKU LINK<br> MUKIM  GADONG +673-2455123
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 5</h5>
+									<p>#1<br>BGN.HJ.AWANG IBRAHIM<br> SPG 250-24-29<br> KPG LAMBAK KANAN<br>BERAKAS<br>
+									BRUNEI +673-2342121
+									</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="offlineIsSet(2)">
+					<div class="country">
+						<div>
+							<p class="offline-store-name">Oriental Zebra Company  Limited</p>
+						</div>
+						<div>
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 1</h5>
+									<p>No.225<br> 84th street<br>Mandalay<br>Myanmar 
+									+95-9-258688876
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 2</h5>
+									<p>NO. 118<br>8F<br>23street，Upper Block<br>Lathar Tsp<br>Yangon<br>Myanmar.
+									+95-9-253711110
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 3</h5>
+									<p>#11<br> GRD FLOOR<br> DELIMA COMPLEX 1<br> KG SERUSOP<br> JALAN MUARA 
+									+673-2340633
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 4</h5>
+									<p>#2<br> BLK F<br> LATIFUDDIN COMPLEX<br> KG PENGKALAN GADONG<br> TUNGKU LINK<br> MUKIM  GADONG +673-2455123
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 5</h5>
+									<p>#1<br>BGN.HJ.AWANG IBRAHIM<br> SPG 250-24-29<br> KPG LAMBAK KANAN<br>BERAKAS<br>
+									BRUNEI +673-2342121
+									</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="offlineIsSet(3)">
+					<div class="country">
+						<div>
+							<p class="offline-store-name">Camfone Mobile Company</p>
+						</div>
+						<div>
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 1</h5>
+									<p>#89A, ST 310<br> S/K Tuol Svay Prey 2<br> Khan Chamkamorn<br> Phnom Penh 
+									+023-636-1116<br>+071-33-555-86<br>+071-33-555-20
+									</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="offlineIsSet(4)">
+					<div class="country">
+						<div>
+							<p class="offline-store-name">PB technologies limited</p>
+						</div>
+						<div>
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 1</h5>
+									<p>#89A, ST 310<br> S/K Tuol Svay Prey 2<br> Khan Chamkamorn<br> Phnom Penh 
+									+023-636-1116<br>+071-33-555-86<br>+071-33-555-20
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 2</h5>
+									<p>4 Station Rd<br> Penrose<br> Auckland<br> New Zealand. 
+									0064 (09) 583 9200
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 3</h5>
+									<p>75 Porana Rd<br> Glenfield<br> Auckland<br> New Zealand. 
+									0064 (09) 441 0002
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 4</h5>
+									<p>1st Floor<br> 105 Queen St<br> Auckland CBD<br> New Zealand.
+									0064 (09) 304 0373
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 5</h5>
+									<p>Level 2<br> Kate Edger Information Commons<br> 9 Symonds St<br> Auckland CBD<br> 
+									New Zealand. 0064 (09) 357 0882
+									</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	<script type="text/ng-template" id="pages/forum.html">
+		<div ng-controller="Forum" class="forum-page">
+		<div class="col-lg-12"> 
+		
+		<div id="comment-list" ng-repeat="comment in comments">
+			<div id="image-block">
+				<img id="profile-picture" ng-src="{{comment.image}}" alt="portfoliole-picture"/>
+			</div>
+			<div id="text-block">
+				<div class="comment-info name">{{comment.name}}</div>
+				<div class="comment-info" id="comment">{{comment.comment}}</div>
+				<div class="comment-info countries">{{comment.country}}</div>
+			</div>
+		</div>
+		
+		
+			<ng-form name="comment_box">
+			<img ng-src="{{comment.image}}" id="image-profile" alt="profile-picture" />
+				<input type="text" class="comment-form" id="name" ng-model="comment.name" ng-minlength="2" ng-maxlength="20" ng-required="true" placeholder="Name"/>
+				<select class="comment-form" ng-model="comment.country" ng-options="x.country as x.country for x in options" ng-required="true">
+				<option value="">-- Choose Country --</option>
+				</select>
+				<textarea type="text" class="comment-form countries" ng-model="comment.comment" rows="6" cols="90" ng-minlength="1" ng-maxlength="300" ng-required="true" placeholder="Comment"></textarea>
+				<span class="comment-form" id="remain_amount_of_letters">{{300-dataObject.comment.length}} Left</span>
+				<button class="comment-form comment-button" ng-disabled="comment_box.$invalid" type="button" ng-click="addComment(comment)">Place comment</button>
+			</ng-form>
+		</div>
+		</div>
+
+	</script>
+
+	<div id="wrapper">
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+				</button>
+				
+				<a class="navbar-brand" href="http://169.254.47.43:8081/#/">
+					<img src="./Meizu_files/meizu_logo.png" id="navbar-logo" alt="meizu-logo">
+				</a>
+			</div>
+
+			<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="http://169.254.47.43:8081/#/">Products</a></li>
+				<li><a href="http://169.254.47.43:8081/#/accessories">Accessories</a></li>
+				<li><a href="http://169.254.47.43:8081/#/wheretobuy">Where to buy</a></li>
+				<li><a href="http://169.254.47.43:8081/#/forum">Forum</a></li>
+			</ul>
+			</div>
+		</div>
+	</nav>
+
+	
+		
+			<!-- ngView: --><div ng-view="" class="ng-scope">
+		<div ng-controller="TabController" class="row ng-scope">
+			<div class="container-fluid">
+			<p class="title-stores">Online Stores</p>
+			<div class="col-md-2 tab-blocks">
+				<ul class="nav nav-pills nav-stacked">
+					<li class="{active: isSet}">
+					 	<a href="http://169.254.47.43:8081/" ng-click="setTab(1)" class="country  bold-text">Asia</a>
+					</li>
+
+					<li class="{active: isSet}">
+						<a href="http://169.254.47.43:8081/" ng-click="setTab(2)" class="country  bold-text">Europe</a>
+					</li>
+
+					<li class="{active: isSet}">
+						<a href="http://169.254.47.43:8081/" ng-click="setTab(3)" class="country  bold-text">South-America</a>
+					</li>
+
+					<li class="{active: isSet}">
+						<a href="http://169.254.47.43:8081/" ng-click="setTab(4)" class="country bold-text">Oceania</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="isSet(1)" class="">
+					<div class="country">
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+					<!-- 		<span class="country-icon indian-icon"></span> -->
+							<p>India</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="http://www.amazon.in/gp/product/B01082CP4S/f=s9_simh_gw_p107_d11_i6?pf_rd_m=A1VBAL9TL5WCBF&amp;pf_rd_s=desktop-1&amp;pf_rd_r=1WSP93T9AA95KCRZ9C0G&amp;pf_rd_t=36701&amp;pf_rd_p=653407267&amp;pf_rd_i=desktop" target="_blank">
+										<img ng-src="image/amazon.jpg" alt="amazon-india-sales" class="store-image" src="./Meizu_files/amazon.jpg">
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="https://www.snapdeal.com/product/meizu-mx5-silver-black/618643364985" target="_blank">
+										<img ng-src="image/snapdeal.jpg" alt="snapdeal-sales" class="store-image" src="./Meizu_files/snapdeal.jpg">
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+							<!-- <span class="country-icon israel-icon"></span> -->
+							<p>Israel</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="http://www.meizu.co.il/" target="_blank">
+										<img ng-src="image/israel.jpg" alt="israel_meizu-sales" class="store-image" src="./Meizu_files/israel.jpg">
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://www.bug.co.il/fpage.asp?brand=153&amp;bna=Meizu" target="_blank">
+										<img ng-src="image/bug.jpg" alt="bug-sales" class="store-image" src="./Meizu_files/bug.jpg">
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="isSet(2)" class="ng-hide">
+					<div class="country">
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon indian-icon"></span> -->
+							<p>France</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="http://www.meizumobiles.fr/shop/" target="_blank">
+										<img ng-src="image/meizu-fr.jpg" alt="meizu-france-sales" class="store-image" src="./Meizu_files/meizu-fr.jpg">
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://www.cdiscount.com/search/10/meizu.html#_his_" target="_blank">
+										<img ng-src="image/cdiscount.jpg" alt="cdiscount-france-sales" class="store-image" src="./Meizu_files/cdiscount.jpg">
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://www.rueducommerce.fr/~meizu" target="_blank">
+										<img ng-src="image/ruducommerce.jpg" alt="ruducommerce=france-sales" class="store-image" src="./Meizu_files/ruducommerce.jpg">
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="https://www.amazon.fr/s/ref=nb_sb_noss/278-2570132-9376431?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;url=search-alias%3Daps&amp;field-keywords=meizu" target="_blank">
+										<img ng-src="image/amazonfr.jpg" alt="amazon-france-france-sales" class="store-image" src="./Meizu_files/amazonfr.jpg">
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="https://www.pixmania.fr/search/meizu.html" target="_blank">
+									 	<img ng-src="image/pixmania.jpg" alt="pixmania-france-sales" class="store-image" src="./Meizu_files/pixmania.jpg">
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon israel-icon"></span> -->
+							<p>Italy</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="https://www.meizumart.it/en/" target="_blank">
+										<img ng-src="image/meizumart.jpg" alt="meizu-sales" class="store-image" src="./Meizu_files/meizumart.jpg">
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="https://www.topresellerstore.com/en/132-meizu" target="_blank">
+										<img ng-src="image/topresellerstore.jpg" alt="bug-sales" class="store-image" src="./Meizu_files/topresellerstore.jpg">
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon israel-icon"></span> -->
+							<p>Russia</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="http://www.mymeizu.ru/" target="_blank">
+										<img ng-src="image/meizu-russia.jpg" alt="meizu-russia-sales" class="store-image" src="./Meizu_files/meizu-russia.jpg">
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://pixelphone.ru/search/index.php?q=meizu&amp;s=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA" target="_blank">
+										<img ng-src="image/pixelphone.jpg" alt="pixelphone-sales" class="store-image" src="./Meizu_files/pixelphone.jpg">
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon israel-icon"></span> -->
+							<p>Spain</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="https://www.mymeizu.es/" target="_blank">
+										<img ng-src="image/meizu-spain.jpg" alt="meizu-spain-sales" class="store-image" src="./Meizu_files/meizu-spain.jpg">
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://www.meizuspain.com/" target="_blank">
+										<img ng-src="image/meizu-espana.jpg" alt="meizu-espana-sales" class="store-image" src="./Meizu_files/meizu-espana.jpg">
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon israel-icon"></span> -->
+							<p>Ukraine</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="http://www.citrus.ua/shop/goods/mobile/1173/?utm_source=meizu_com&amp;utm_medium=referral&amp;utm_campaign=citrus-logo-wheretobuy" target="_blank">
+										<img ng-src="image/untpvc.jpg" alt="untpvc-sales" class="store-image" src="./Meizu_files/untpvc.jpg">
+									</a>
+								</li>
+								<li class="country-shops">
+									<a href="http://e-ton.ua/smartfony/meizu/" target="_blank">
+										<img ng-src="image/e-ton.jpg" alt="e_ton-sales" class="store-image" src="./Meizu_files/e-ton.jpg">
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon israel-icon"></span> -->
+							<p>UK</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="https://www.amazon.co.uk/s/ref=nb_sb_noss/275-0297766-2602457?url=search-alias=aps&amp;field-keywords=meizu" target="_blank">
+										<img ng-src="image/amazon-uk.jpg" alt="amazon-uk-sales" class="store-image" src="./Meizu_files/amazon-uk.jpg">
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="isSet(3)" class="ng-hide">
+					<div class="country">
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon indian-icon"></span> -->
+							<p>Brazil</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="https://vistation.com.br/" target="_blank">
+										<img ng-src="image/meizu-brazil.jpg" alt="meizu-brazil-sales" class="store-image" src="./Meizu_files/meizu-brazil.jpg">
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="isSet(4)" class="ng-hide">
+					<div class="country">
+						<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="center">
+						<div class="country-row">
+						<!-- 	<span class="country-icon indian-icon"></span> -->
+							<p>New Zealand</p>
+						</div>
+						<div class="country-row-details">
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="country-shops">
+									<a href="https://www.pbtech.co.nz/" target="_blank">
+										<img ng-src="image/pb.jpg" alt="pb-oceanie-sales" class="store-image" src="./Meizu_files/pb.jpg">
+									</a>
+								</li>
+							</ul>
+						</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<p class="title-stores">Offline Stores</p>
+			<div class="col-md-2 tab-blocks">
+				<ul class="nav nav-pills nav-stacked">
+					<li class="{active: offlineIsSet}">
+					 	<a href="http://169.254.47.43:8081/" ng-click="offlineTab(1)" class="offline-store country">Brunei</a>
+					</li>
+
+					<li class="{active: offlineIsSet}">
+						<a href="http://169.254.47.43:8081/" ng-click="offlineTab(2)" class="offline-store country">Cambodia</a>
+					</li>
+
+					<li class="{active: offlineIsSet}">
+						<a href="http://169.254.47.43:8081/" ng-click="offlineTab(3)" class="offline-store country">Myanmar</a>
+					</li>
+
+					<li class="{active: offlineIsSet}">
+						<a href="http://169.254.47.43:8081/" ng-click="offlineTab(4)" class="offline-store country">New-Zealand</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="offlineIsSet(1)" class="">
+					<div class="country">
+						<div>
+							<p class="offline-store-name">Jill and Jill Enterprise</p>
+						</div>
+						<div>
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 1</h5>
+									<p># 5 GROUND FLOOR BLK<br> B LOT 30087 SPG. 343 KG<br> MULAUT MUKIM SENGKURONG BG 2121 +673-2672665
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 2</h5>
+									<p>#37B, GRD FLR PLAZA SERIA<br> JLN SULTAN OMAR ALI<br> SERIA<br> BELAIT 
+									+673-3222901
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 3</h5>
+									<p>#2, GRD FLR<br> BLK. H<br> ABDUL RAZAK COMPLEX<br> KM4, KG GADONG<br> JLN GADONG 
+									+673-2455131
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 4</h5>
+									<p>KG MUMONG, JLN MUALANA<br>  KM 26<br> KUALA BELAIT (INSIDE SOON LEE) 
+									+673-3335599
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 5</h5>
+									<p>#2-40, 2ND FLR<br> THE MALL ABDUL RAZAK COMPLEX<br> GADONG 
+									+673-2425199
+									</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<p class="offline-store-name second-offline-block">WYWY Enterprise</p>
+						</div>
+						<div>
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 1</h5>
+									<p>#G-06/08 and 11<br> BLK B<br> YAYASAN SULTAN HJ HASSANAL BOLKIAH<br> BSB 
+									+673-2232693
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 2</h5>
+									<p>PLOT SHOP #01<br> JLN SUNGAI K.B 
+									+673-3336226
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 3</h5>
+									<p>#11<br> GRD FLOOR<br> DELIMA COMPLEX 1<br> KG SERUSOP<br> JALAN MUARA 
+									+673-2340633
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 4</h5>
+									<p>#2<br> BLK F<br> LATIFUDDIN COMPLEX<br> KG PENGKALAN GADONG<br> TUNGKU LINK<br> MUKIM  GADONG +673-2455123
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 5</h5>
+									<p>#1<br>BGN.HJ.AWANG IBRAHIM<br> SPG 250-24-29<br> KPG LAMBAK KANAN<br>BERAKAS<br>
+									BRUNEI +673-2342121
+									</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="offlineIsSet(2)" class="ng-hide">
+					<div class="country">
+						<div>
+							<p class="offline-store-name">Oriental Zebra Company  Limited</p>
+						</div>
+						<div>
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 1</h5>
+									<p>No.225<br> 84th street<br>Mandalay<br>Myanmar 
+									+95-9-258688876
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 2</h5>
+									<p>NO. 118<br>8F<br>23street，Upper Block<br>Lathar Tsp<br>Yangon<br>Myanmar.
+									+95-9-253711110
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 3</h5>
+									<p>#11<br> GRD FLOOR<br> DELIMA COMPLEX 1<br> KG SERUSOP<br> JALAN MUARA 
+									+673-2340633
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 4</h5>
+									<p>#2<br> BLK F<br> LATIFUDDIN COMPLEX<br> KG PENGKALAN GADONG<br> TUNGKU LINK<br> MUKIM  GADONG +673-2455123
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 5</h5>
+									<p>#1<br>BGN.HJ.AWANG IBRAHIM<br> SPG 250-24-29<br> KPG LAMBAK KANAN<br>BERAKAS<br>
+									BRUNEI +673-2342121
+									</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="offlineIsSet(3)" class="ng-hide">
+					<div class="country">
+						<div>
+							<p class="offline-store-name">Camfone Mobile Company</p>
+						</div>
+						<div>
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 1</h5>
+									<p>#89A, ST 310<br> S/K Tuol Svay Prey 2<br> Khan Chamkamorn<br> Phnom Penh 
+									+023-636-1116<br>+071-33-555-86<br>+071-33-555-20
+									</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-10">
+				<div ng-show="offlineIsSet(4)" class="ng-hide">
+					<div class="country">
+						<div>
+							<p class="offline-store-name">PB technologies limited</p>
+						</div>
+						<div>
+							<ul class="list-unstyled"> <!-- Bootstrap 3 thing, automatically removes the bullits from unordered list -->
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 1</h5>
+									<p>#89A, ST 310<br> S/K Tuol Svay Prey 2<br> Khan Chamkamorn<br> Phnom Penh 
+									+023-636-1116<br>+071-33-555-86<br>+071-33-555-20
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 2</h5>
+									<p>4 Station Rd<br> Penrose<br> Auckland<br> New Zealand. 
+									0064 (09) 583 9200
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 3</h5>
+									<p>75 Porana Rd<br> Glenfield<br> Auckland<br> New Zealand. 
+									0064 (09) 441 0002
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 4</h5>
+									<p>1st Floor<br> 105 Queen St<br> Auckland CBD<br> New Zealand.
+									0064 (09) 304 0373
+									</p>
+									</div>
+								</li>
+								<li class="offline-address">
+									<div class="offline-block">
+									<h5 class="store-number">Store 5</h5>
+									<p>Level 2<br> Kate Edger Information Commons<br> 9 Symonds St<br> Auckland CBD<br> 
+									New Zealand. 0064 (09) 357 0882
+									</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	<script type="text/ng-template" id="pages/forum.html">
+		<div ng-controller="Forum" class="forum-page">
+		<div class="col-lg-12"> 
+		
+		<div id="comment-list" ng-repeat="comment in comments">
+			<div id="image-block">
+				<img id="profile-picture" ng-src="{{comment.image}}" alt="portfoliole-picture"/>
+			</div>
+			<div id="text-block">
+				<div class="comment-info name">{{comment.name}}</div>
+				<div class="comment-info" id="comment">{{comment.comment}}</div>
+				<div class="comment-info countries">{{comment.country}}</div>
+			</div>
+		</div>
+		
+		
+			<ng-form name="comment_box">
+			<img ng-src="{{comment.image}}" id="image-profile" alt="profile-picture" />
+				<input type="text" class="comment-form" id="name" ng-model="comment.name" ng-minlength="2" ng-maxlength="20" ng-required="true" placeholder="Name"/>
+				<select class="comment-form" ng-model="comment.country" ng-options="x.country as x.country for x in options" ng-required="true">
+				<option value="">-- Choose Country --</option>
+				</select>
+				<textarea type="text" class="comment-form countries" ng-model="comment.comment" rows="6" cols="90" ng-minlength="1" ng-maxlength="300" ng-required="true" placeholder="Comment"></textarea>
+				<span class="comment-form" id="remain_amount_of_letters">{{300-dataObject.comment.length}} Left</span>
+				<button class="comment-form comment-button" ng-disabled="comment_box.$invalid" type="button" ng-click="addComment(comment)">Place comment</button>
+			</ng-form>
+		</div>
+		</div>
+
+	</script></div></div>
+		
+	
+	</div>
+
+	<div class="container-fluid" id="footer-container">
+		<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+			<ul class="list-footer">
+				<li class="list-footer-header">Products</li>
+				<li><a href="http://169.254.47.43:8081/#">Mx6</a></li>
+				<li><a href="http://169.254.47.43:8081/#">M3s</a></li>
+				<li><a href="http://169.254.47.43:8081/#">M3E</a></li>
+			</ul>
+		</div>
+
+		<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+			<ul class="list-footer">
+				<li class="list-footer-header">Flyme os</li>
+				<li><a href="http://169.254.47.43:8081/#">Flyme5</a></li>
+				<li><a href="http://169.254.47.43:8081/#">Forum</a></li>
+				<li><a href="http://169.254.47.43:8081/#">Downloads</a></li>
+			</ul>
+		</div>
+
+		<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+			<ul class="list-footer">
+				<li class="list-footer-header">About</li>
+				<li><a href="http://169.254.47.43:8081/#">About Meizu</a></li>
+				<li><a href="http://169.254.47.43:8081/#">Contact Us</a></li>
+				<li><a href="http://169.254.47.43:8081/#">Legal Statement</a></li>
+			</ul>
+		</div>
+
+		<div class="col-lg-6 col-md-6 col-sm-3 col-xs-12">
+		<!-- 	<p>Colum A</p>
+
+			<span id="social-media-icons">
+				<a href="https://wwww.facebook.com/meizu" target="_blank">
+					<i class="social_image social_imag1"></i>
+				</a>
+
+				<a href="https//www.linkedin.com/company/meizu" target="_blank">
+					<i class="social_image social_imag2"></i>
+				</a>
+
+				<a href="https://twitter.com/meizu" target="_blank">
+					<i class="social_image social_imag3"></i>
+				</a>
+
+				<a href="http://www.plus.google.com/+Meizuofficial" target="_blank">
+					<i class="social_image social_imag4"></i>
+				</a>
+			</span>	 -->
+		</div>
+	</div>
+	
+	<div id="footer">
+		<p id="footer-text">©2016 Developed by Chi Ho Liu</p>
+	</div>
+
+
+</body></html>

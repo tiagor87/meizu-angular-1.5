@@ -1,0 +1,54 @@
+var accessoires = angular.module("accessoires", ["ngAnimate"]);
+	accessoires.controller("HeadphoneController", function($scope){
+	});
+
+	accessoires.directive("scroll", function ($window) {
+	    return function(scope, element, attrs) {
+	        angular.element($window).bind("scroll", function() {
+				if (this.pageYOffset > 10) {
+					scope.boolChangeClass = true;
+				} 
+				if (this.pageYOffset > 170) {
+					scope.imageAnimateDown = true;
+				}
+				scope.$apply();
+	        });
+	    };
+	});
+
+ // 	accessoires.directive("youtube", function($window) {
+ // 		return {
+ // 			restrict: "E", 
+		
+	//     link: function(scope, element) {
+	//       var tag = document.createElement('script');
+	//       tag.src = "https://www.youtube.com/iframe_api";
+	//       var firstScriptTag = document.getElementsByTagName('script')[0];
+	//       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	//       var player;
+
+	//       $window.onYouTubeIframeAPIReady = function() {
+
+	//         player = new YT.Player(element.children()[0], {
+	//           playerVars: {
+	//             autoplay: 0,
+	//             html5: 1,
+	//             theme: "light",
+	//             modesbranding: 0,
+	//             color: "white",
+	//             iv_load_policy: 3,
+	//             showinfo: 1,
+	//             controls: 1
+	//           },
+
+ // 			scope: {
+ // 				height: "300", 
+ // 				width: "400", 
+ // 				videoid: "5CE-dzDKOyo"
+ // 			},
+	//         });
+	//       }
+	// 	}  
+	//   };
+	// });

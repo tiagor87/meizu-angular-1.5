@@ -1,0 +1,20 @@
+<div ng-controller="productController" class="json">
+    <div class="nine-phones">
+        <div class="item" ng-repeat="phone in phones">
+            <div class="phone_block">
+                <div class="brand">{{phone.brand}}</div>
+                <img ng-src="{{phone.logo}}" alt="{{phone.alt}}" class="image_logo" />
+                <img ng-src="{{phone.image}}" "{{phone.alt_image}}" class="image_phone" />
+
+                <ul class="unordered_list_phone">
+                    <li class="serie">{{phone.serie}}</li>
+                    <li class="memory">{{phone.memory}}</li>
+                    <li class="rom">{{phone.rom}}</li>
+                    <li class="price">{{phone.price}}</li> 
+                </ul> 
+                <input type="number" name="quantity" ng-model="phone.quantity" value="1" min="1" max="50">
+                <input type="button" ng-click="addProduct(phone)" value="Add">
+            </div>
+        </div>
+    </div>
+</div>

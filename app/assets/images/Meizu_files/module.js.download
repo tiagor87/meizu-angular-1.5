@@ -1,0 +1,32 @@
+var app = angular.module("myApp", ["ngRoute", "slideshow", "json", "accessoires", "wheretobuy", "forum-page"]);
+	app.config(function($routeProvider) {
+		// $locationProvider.html5Mode(true);
+		$routeProvider
+		.when('/', {
+			templateUrl : 'pages/home.html', 
+			controller : 'HomeController'
+		})
+		.when('/accessories', {
+			templateUrl : 'pages/accessories.html', 
+			controller : 'AccessoriesController'
+		})
+		.when('/wheretobuy', {
+			templateUrl : 'pages/wheretobuy.html', 
+			controller : 'WheretobuyController'
+		})
+		.when('/forum', {
+			templateUrl : 'pages/forum.html', 
+			controller : 'ForumController'
+		})
+		.otherwise({redirectTo: '/'});
+	});
+
+	app.controller('HomeController', function($scope) {
+});
+	app.controller('AccessoriesController', function($scope) {
+});
+	app.controller('WheretobuyController', function($scope) {
+});
+	app.controller('ForumController', function($scope) {
+});
+

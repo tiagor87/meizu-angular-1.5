@@ -1,0 +1,26 @@
+angular.module("slideshow", ["myApp"])
+	.controller("SlideShowController", function($scope,  $timeout) {
+	var slideInSlideshow = 3;
+	var slideTimeInterval = 4000;
+
+	$scope.slider = 1;
+		var slideTimer =
+		$timeout(function interval() {
+			
+		$scope.slider = ($scope.slider % slideInSlideshow) + 1;
+
+		slideTimer = $timeout(interval, slideTimeInterval);
+	}, slideTimeInterval);
+		
+	var image1 = "image/image01.jpg";
+	var image2 = "image/image02.jpg";
+	var image3 = "image/image03.jpg";
+
+	var image = {
+		one: image1, 
+		two: image2, 
+		three: image3
+	};
+	
+		$scope.image = image;
+	});
