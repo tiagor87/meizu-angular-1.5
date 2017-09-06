@@ -1,0 +1,16 @@
+<div class="shoppingcart">
+	<table>
+		<thead>
+			<tr>
+				<th>Serie</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="phone in cartCtrl.products">
+				<td>{{phone.serie}}</td>
+				<td>{{phone.price}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
